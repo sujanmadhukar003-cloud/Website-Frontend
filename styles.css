@@ -1,0 +1,103 @@
+/* NotesVault Custom CSS - Pure White 2-Color Scheme Palette */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* White Canvas + 2-Color System */
+  /* Color 1: Primary Teal/Emerald Brand Color */
+  --primary-teal: #0D9488;
+  --primary-teal-hover: #0F766E;
+  --primary-teal-light: #F0FDF4;
+  --primary-teal-border: #99F6E4;
+
+  /* Color 2: Secondary Slate/Charcoal Neutral */
+  --color-slate-dark: #0F172A;
+  --color-slate-body: #334155;
+  --color-slate-muted: #64748B;
+  --color-slate-light: #F8FAFC;
+  --color-slate-border: #E2E8F0;
+
+  /* Pure White Main Background */
+  --bg-white: #FFFFFF;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-white);
+  color: var(--color-slate-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Card Hover Elevation */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.01);
+  border-color: var(--primary-teal);
+}
+
+/* Active Nav Item */
+.nav-item-active {
+  background-color: var(--primary-teal-light);
+  color: var(--primary-teal-hover);
+  border-right: 3px solid var(--primary-teal);
+  font-weight: 600;
+}
+
+/* Circular Progress Ring */
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.35s ease-in-out;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+/* Ctrl+K Kbd Badge */
+.kbd-badge {
+  background-color: var(--color-slate-light);
+  border: 1px solid var(--color-slate-border);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+/* Custom Transitions */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.25s ease-in-out forwards;
+}
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Two Color Accent Badges */
+.badge-primary {
+  background-color: var(--primary-teal-light);
+  color: var(--primary-teal-hover);
+  border: 1px solid var(--primary-teal-border);
+}
+
+.badge-neutral {
+  background-color: var(--color-slate-light);
+  color: var(--color-slate-body);
+  border: 1px solid var(--color-slate-border);
+}
